@@ -33,6 +33,10 @@ If you use pageant and want to keep it just use https://github.com/vuori/weasel-
 - chmod 600 ~/.ssh/...
 - Deploy the .basrc and .zshrc files
 
+
+For ZSH use this Plugin: 
+https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ssh-agent
+
 # Step 4: Deploy the rest
 - deploy .vimrc
 -  deploy...
