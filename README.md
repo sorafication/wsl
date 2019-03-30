@@ -19,8 +19,10 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 # Step 2: Install needed Tools
 run: 
 sudo apt-get update
-sudo apt-get install curl git zsh python3-pip
-pip install awscli ...
+sudo apt-get install curl git zsh python3-pip awscli google-cloud-sdk
+
+aws configure
+gcloud init
 
 For oh-my-zsh:
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
