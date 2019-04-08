@@ -46,8 +46,6 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 sudo apt-get update
 sudo apt-get install curl git zsh python3-pip awscli google-cloud-sdk tmux
 
-aws configure
-gcloud init
 ```
 
 ## Step 2.1: zsh
@@ -80,6 +78,12 @@ wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircol
 - Note: Needs to be activated in .zshrc with: `eval $(dircolors -b $HOME/.dircolors)`
 - Source: https://github.com/trapd00r/LS_COLORS
 
+
+## Step 2.2: Configure Credentials
+```
+aws configure
+gcloud init
+```
 
 
 # Step 3: Dotfiles
