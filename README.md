@@ -53,4 +53,8 @@ https://github.com/robbyrussell/oh-my-zsh/tree/master/plugins/ssh-agent
 -  deploy...
 
 
-
+To Do:
+- https://github.com/junegunn/fzf
+- TMUX
+- all zsh plugins
+- tmux plugins
