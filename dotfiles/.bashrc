@@ -116,34 +116,37 @@ if ! shopt -oq posix; then
   fi
 fi
 
-###### OKI ##############
+############ Custom: Use zsh as default
+# --> not needed anymore. Just type chsh -s $(which zsh)
+# --> --> still needed for VSCode for example
+
+if test -t 1; then
+exec zsh
+fi
+
+############ Custom: SSH with pageant
 
 # Use pageant SSH Keys in WSL
-#eval $(/mnt/c/Users/wieczoreko/Documents/SSH/weasel-pageant/weasel-pageant -r)
+# eval $(/mnt/c/Users/wieczoreko/Documents/SSH/weasel-pageant/weasel-pageant -r)
 
-# Use zsh as default shell
-# --> not needed anymore. Just type chsh -s $(which zsh)
-#if test -t 1; then
-#exec zsh
-#fi
+############ Custom: SSH with shell
+# 
+# if [ -d "$HOME/bin" ] ; then
+#    PATH="$HOME/bin:$PATH"
+# fi
+ 
+# ssh-agent configuration
+# if [ -z "$(pgrep ssh-agent)" ]; then
+#     rm -rf /tmp/ssh-*
+#     eval $(ssh-agent -s) > /dev/null
+# else
+#     export SSH_AGENT_PID=$(pgrep ssh-agent)
+#     export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
+# fi
+# 
+# if [ "$(ssh-add -l)" == "The agent has no identities." ]; then
+#   ssh-add ~/.ssh/.id_rsa_oki
+#   ssh-add ~/.ssh/.id_rsa_hosting
+# fi
 
-# Use linux ssh-agent
-# wsfl bash is not a login shell
- 
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
- 
-# ssh-agent configuration if using bash
-if [ -z "$(pgrep ssh-agent)" ]; then
-    rm -rf /tmp/ssh-*
-    eval $(ssh-agent -s) > /dev/null
-else
-    export SSH_AGENT_PID=$(pgrep ssh-agent)
-    export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name agent.*)
-fi
- 
-if [ "$(ssh-add -l)" == "The agent has no identities." ]; then
-  ssh-add ~/.ssh/.id_rsa_oki
-  ssh-add ~/.ssh/.id_rsa_hosting
-fi
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -8,7 +8,7 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster"
+#ZSH_THEME="materialshell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -62,10 +62,10 @@
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent)
 
+plugins=(git ssh-agent zsh-syntax-highlighting)
 
-#### SSH-Agent-Config
+############ Custom: SSH-Agent-Config
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa_oki id_rsa_hosting
 
@@ -104,38 +104,28 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-###### OKI ########
-# fancy completion
-autoload compinit && compinit
-zstyle ':completion:*' menu select
-#zstyle ':completion:*' list-colors ''
-
-
-##aliases
+############ Custom: Alias
 alias ls="ls --color"
 alias ll="ls -la"
-
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias cdgit="cd /mnt/c/Users/wieczoreko/Documents/Github/"
-
 alias wow="git status"
 alias much="git"
 
+############ Custom: Path (Currently not needing)
+# add local bin to path
 
+# export PATH=~/bin:$PATH
+# export PATH=~/.local/bin:$PATH
 
-## add local bin to path
-export PATH=~/bin:$PATH
-export PATH=~/.local/bin:$PATH
 ## export vim as editor
-export EDITOR=vim
-
-##Use Different Colors for Directory
-#[ -e ~/.dircolors ] && eval $(dircolors -b ~/.dircolors) || eval $(dircolors -b)
+# export EDITOR=vim
 
 
-##Add Function to see current git branch
+############ Custom: Git
+## Add Function to see current git branch
 git_branch () {
 branch_name=`git symbolic-ref --quiet --short HEAD 2> /dev/null`
     if [ $? -eq 0 ]
@@ -144,13 +134,27 @@ branch_name=`git symbolic-ref --quiet --short HEAD 2> /dev/null`
     fi
 }
 
-
-##set this to get the git_branch function working
+#set this to get the git_branch function working
 setopt PROMPT_SUBST
 
-##Show Time on right side
+
+############ Custom: Prompt
+
+# Show Time on right side
 RPROMPT="[%T]"
 
-##Left Prompt Customization
-PS1='[%F{yellow}%m%f:%F{blue}%1~%f]$(git_branch)%# '
+# Left Prompt Customization
+PS1='[%F{yellow}%m%f:%F{green}%1~%f]$(git_branch)# '
 
+
+############ Custom: Plugins
+# Dircolors
+eval $( dircolors -b $HOME/.dircolors )
+
+# Auto Completition Colors
+zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+autoload -Uz compinit
+compinit
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

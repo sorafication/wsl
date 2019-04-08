@@ -2,10 +2,10 @@
 set mouse-=a
 
 " Show line numbers 
-set number
+" set number
 
 " Enable Syntax Highlighting
-syntax on
+"syntax on
 
 " Show file stats
  set ruler
