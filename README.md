@@ -37,6 +37,18 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 
   1) change [colors] section from MobaXterm.ini file
   2) import or create ur sessions
+
+
+## Step 1.3: Make Ditto compatible with WSL
+  1) Hotkey for Ditto: `STRG + ALT + V`
+  2) Ditto --> Options --> Advanced Options:
+  Change `Default Paste String` from `^{VKEY86}` to `^+{VKEY86}`
+  
+  ## Step 1.4: Configure VSCode
+  1) Download Settings Sync from extensions
+  2) Link to Gist: https://gist.github.com/wieczoreko/0c752654f8c25b3863dc03e771f97904
+  3) to use WSL from within VSCode change following line:
+  `"terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\wsl.exe",`
   
 
 
