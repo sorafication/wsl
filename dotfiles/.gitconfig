@@ -1,0 +1,8 @@
+[core]
+  editor = vim
+[color]
+  ui = auto
+
+[user]
+  email = oktawiusz.wieczorek@cbc.de
+  name = Oktawiusz Wieczorek

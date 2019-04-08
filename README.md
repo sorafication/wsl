@@ -27,12 +27,12 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 
 ## Step 1.1: Configure Bash on Windows
 
-  1) Check Option:  `Verwendung von STRG + UMSCHALT +C/V zum Kopieren/Einfügen`  
+  1) Check Option:  `Verwendung von STRG + UMSCHALT +C/V zum Kopieren/Einfügen`
   2) Under `Farben` change to preffered Color Style ( Iam Using https://github.com/carloscuesta/materialshell/tree/master/shell-color-themes)
   3) Font: Lucida Console
   4) Font Size: 14
-  
-  
+
+
 ## Step 1.2: Configure MobaXterm
 
   1) change [colors] section from MobaXterm.ini file
@@ -43,13 +43,13 @@ sudo mount -t drvfs C: /mnt/c -o metadata
   1) Hotkey for Ditto: `STRG + ALT + V`
   2) Ditto --> Options --> Advanced Options:
   Change `Default Paste String` from `^{VKEY86}` to `^+{VKEY86}`
-  
+
   ## Step 1.4: Configure VSCode
   1) Download Settings Sync from extensions
   2) Link to Gist: https://gist.github.com/wieczoreko/0c752654f8c25b3863dc03e771f97904
   3) to use WSL from within VSCode change following line:
   `"terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\wsl.exe",`
-  
+
 
 
 # Step 2: Install needed Tools
@@ -104,9 +104,10 @@ Currently using this dotfiles:
 - .zshrc
 - .vimrc
 - .tmuxconf
+- .gitconfig
 
  Just copy all files to homedir.
- 
+
 
 # Step 4: SSH
 
@@ -115,14 +116,14 @@ There are multiple options to use SSH.
 2) through WSL with Windows Pageant
 3) through WSL with Linux ssh-agent
 
- 
-## Step 4.1: Deploy SSH with Pageant 
 
-1) Download https://github.com/vuori/weasel-pageant/releases 
+## Step 4.1: Deploy SSH with Pageant
+
+1) Download https://github.com/vuori/weasel-pageant/releases
 2) Extract in a Windows Directory (not WSL)
-3) add to .zshrc: 
+3) add to .zshrc:
 `eval $(<location where you unpacked the zip>/weasel-pageant -r)`
-  
+
 Source: https://github.com/vuori/weasel-pageant
 
 
