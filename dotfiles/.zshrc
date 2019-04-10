@@ -113,7 +113,7 @@ alias ....="cd ../../.."
 alias cdgit="cd /mnt/c/Users/wieczoreko/Documents/Github/"
 alias wow="git status"
 alias much="git"
-
+alias deploy="rsync -avzh /mnt/c/Users/wieczoreko/Documents/Github/wsl/dotfiles/ ~/ && source ~/.zshrc" 
 ############ Custom: Path (Currently not needing)
 # add local bin to path
 
