@@ -44,12 +44,27 @@ sudo mount -t drvfs C: /mnt/c -o metadata
   2) Ditto --> Options --> Advanced Options:
   Change `Default Paste String` from `^{VKEY86}` to `^+{VKEY86}`
 
-  ## Step 1.4: Configure VSCode
+## Step 1.4: Configure VSCode
   1) Download Settings Sync from extensions
   2) Link to Gist: https://gist.github.com/wieczoreko/0c752654f8c25b3863dc03e771f97904
   3) to use WSL from within VSCode change following line:
   `"terminal.integrated.shell.windows": "C:\\WINDOWS\\sysnative\\wsl.exe",`
-
+  
+## Step 1.5: Install Python
+ 1) Link: https://www.python.org/downloads/
+ 2) Opt-in to add Python to PATH
+ 2) Install flake8 under cmd `pip install flake8 boto3`
+ 
+ Note: Python currently not working flawless from Windows with WSL. See: https://github.com/Microsoft/vscode-python/issues/67
+ Workaround: Just execute Python File form terminal.
+ 
+ Link to Windows Python from within WSL:
+ ```
+ /mnt/c/Users/wieczoreko/AppData/Local/Programs/Python/Python37-32/python.exe
+ ```
+  
+  
+ 
 
 
 # Step 2: Install needed Tools
