@@ -53,10 +53,15 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 ## Step 1.5: Install Python
  1) Link: https://www.python.org/downloads/
  2) Opt-in to add Python to PATH
- 2) Install flake8 under cmd `pip install flake8`
+ 2) Install flake8 under cmd `pip install flake8 boto3`
  
  Note: Python currently not working flawless from Windows with WSL. See: https://github.com/Microsoft/vscode-python/issues/67
  Workaround: Just execute Python File form terminal.
+ 
+ Link to Windows Python from within WSL:
+ ```
+ /mnt/c/Users/wieczoreko/AppData/Local/Programs/Python/Python37-32/python.exe
+ ```
   
   
  
