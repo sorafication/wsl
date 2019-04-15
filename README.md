@@ -71,7 +71,7 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 
 ```
 sudo apt-get update
-sudo apt-get install curl git zsh python3-pip awscli google-cloud-sdk tmux
+sudo apt-get install curl git zsh python3-pip awscli google-cloud-sdk tmux whois
 
 ```
 
