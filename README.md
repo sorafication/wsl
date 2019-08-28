@@ -119,6 +119,13 @@ sudo apt install libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcu
 sudo npm install -g aws-azure-login --unsafe-perm
 ```
 
+## Step 2.4 Install Terraform on WSL
+```
+wget https://raw.githubusercontent.com/azurecitadel/azurecitadel.github.io/master/automation/terraform/installLatestTerraform.sh
+```
+
+1) execute Script
+
 
 # Step 3: Dotfiles
 Currently using this dotfiles:
