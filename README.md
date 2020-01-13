@@ -71,7 +71,7 @@ sudo mount -t drvfs C: /mnt/c -o metadata
 
 ```
 sudo apt-get update
-sudo apt-get install curl git zsh python3-pip awscli google-cloud-sdk tmux
+sudo apt-get install curl git zsh python3-pip awscli google-cloud-sdk tmux whois
 
 ```
 
@@ -111,6 +111,26 @@ wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircol
 aws configure
 gcloud init
 ```
+
+## Step 2.3: Configure AWS CLI over Azure AD
+Install:
+```
+sudo apt install libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget npm
+sudo npm install -g aws-azure-login --unsafe-perm
+```
+
+## Step 2.4: Configure Azure CLI over Azure AD
+Install:
+```
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+## Step 2.5 Install Terraform on WSL
+```
+wget https://raw.githubusercontent.com/azurecitadel/azurecitadel.github.io/master/automation/terraform/installLatestTerraform.sh
+```
+
+1) execute Script
 
 
 # Step 3: Dotfiles
