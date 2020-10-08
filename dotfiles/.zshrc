@@ -114,6 +114,7 @@ alias cdgit="cd /mnt/c/Users/wieczoreko/Documents/Github/"
 alias wow="git status"
 alias much="git"
 alias deploy="rsync -avzh /mnt/c/Users/wieczoreko/Documents/Github/wsl/dotfiles/ ~/ && source ~/.zshrc" 
+alias fuck='echo "Running: \e[32msudo \e[35m\e[4m$(fc -ln -1)\e[0m" && sudo $(fc -ln -1)' 
 ############ Custom: Path (Currently not needing)
 # add local bin to path
 
